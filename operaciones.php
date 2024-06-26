@@ -16,10 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         case 'restar':
             $resultado = $numero1 - $numero2;
             break;
-        case 'multiplicar':
+        case 'multiplicarrrrrr':
             $resultado = $numero1 * $numero2;
             break;
-        case 'dividir':
+        case 'dividirrrrrrr':
             if ($numero2 != 0) {
                 $resultado = $numero1 / $numero2;
             } else {
