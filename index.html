@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Innovadora</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff6347;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .instructions,
+        .calculator {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .instructions h2 {
+            margin-top: 0;
+            color: #ff6347;
+        }
+
+        .instructions ul {
+            padding-left: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ff6347;
+        }
+
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f7f9fc;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #ff6347;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff6347;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #e5533d;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ff6347;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculadora Innovadora</h1>
+        <form id="operaciones-form" method="post">
+            <label for="operacion">Operación:</label>
+            <select name="operacion" id="operacion">
+                <option value="sumar">Sumar</option>
+                <option value="restar">Restar</option>
+                <option value="multiplicar">Multiplicar</option>
+                <option value="dividir">Dividir</option>
+            </select>
+            <br>
+            <label for="numero1">Número 1:</label>
+            <input type="number" name="numero1" id="numero1" required>
+            <br>
+            <label for="numero2">Número 2:</label>
+            <input type="number" name="numero2" id="numero2" required>
+            <br>
+            <button type="button" id="calcular-btn">Calcular</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+</body>
+
+</html>
